@@ -7,7 +7,6 @@ This is a personal portfolio website built with [Next.js](https://nextjs.org/) a
 - Responsive navigation bar
 - Hero section with profile image
 - Footer with social links
-- Modern, clean design
 
 ## Getting Started
 
