@@ -1,4 +1,4 @@
-# Juster Portfolio
+# Personal Portfolio
 
 This is a personal portfolio website built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
