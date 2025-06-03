@@ -41,7 +41,7 @@ export default function Home() {
               Get in Touch!
             </button>
           </Link>
-          <Link href="/Works">
+          <Link href="/works">
             <button className="mt-6 px-8 py-3 text-lg bg-purple-600 hover:bg-white hover:text-black transition rounded-full font-semibold shadow-lg">
               Browse Projects
             </button>

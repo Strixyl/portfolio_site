@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { SiR, SiPython, SiNextdotjs } from 'react-icons/si';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail, SiFlutter } from "react-icons/si";
+import { SiGmail, SiFlutter, SiCisco } from "react-icons/si";
 
 
 export default function Skills() {
@@ -26,6 +26,7 @@ export default function Skills() {
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </nav>
+            /* For Skills Card */
             <main className="flex flex-col items-center justify-center px-4 py-16 md:py-24 z-10 relative">
                 <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">My Skills</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
@@ -51,6 +52,13 @@ export default function Skills() {
                         <h3 className="text-xl font-semibold mb-2">Flutter</h3>
                         <p className="text-gray-400 text-center">
                             Cross-platform mobile application development with expressive UIs and fast performance using Dart.
+                        </p>
+                    </div>
+                    <div className="bg-gray-800 rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col items-center">
+                        <SiCisco size={64} className="text-blue-300 mb-4" />
+                        <h3 className="text-xl font-semibold mb-2">Cisco IT Essentials</h3>
+                        <p className="text-gray-400 text-center">
+                            Completed IT Essentials 8: focused on PC hardware, troubleshooting, maintenance, and system assembly.
                         </p>
                     </div>
                 </div>
