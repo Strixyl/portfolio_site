@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { SiR, SiPython, SiNextdotjs } from 'react-icons/si';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail, SiFlutter } from "react-icons/si";
 

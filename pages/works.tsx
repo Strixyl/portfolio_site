@@ -17,7 +17,6 @@ export default function Home() {
                         </span>
                     </h1>
                 </div>
-
                 <ul className="flex space-x-6 text-sm font-bold">
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/skills">Skills</Link></li>
@@ -40,7 +39,7 @@ export default function Home() {
                         />
                         <h3 className="text-xl font-semibold mb-2">Traffic Management System</h3>
                         <p className="text-sm text-gray-400 mb-4">
-                            A collaborative project with my groupmates using HTML, CSS, and JavaScript to simulate real-time traffic light control logic.
+                            A collaborative project with my groupmates for Web System and Technologies using HTML, CSS, and JavaScript to simulate real-time traffic light control logic.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 mt-4">
                             <Link
@@ -65,8 +64,6 @@ export default function Home() {
                     </div>
                 </div>
             </main>
-
-            {/* Footer */}
             <footer className="flex justify-center space-x-6 py-6 text-gray-400">
                 <Link href="https://linkedin.com" target="_blank">in</Link>
                 <Link href="https://github.com/Strixyl" target="_blank">GitHub</Link>
