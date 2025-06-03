@@ -1,6 +1,7 @@
 // src/pages/index.tsx
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
         <ul className="flex space-x-6 text-sm font-bold">
           <li><Link href="/">Home</Link></li>
           <li><Link href="#about">About</Link></li>
-          <li><Link href="#skills">Skills</Link></li>
+          <li><Link href="/skills">Skills</Link></li>
           <li><Link href="/works">Works</Link></li>
           <li><Link href="#contact">Contact</Link></li>
         </ul>
