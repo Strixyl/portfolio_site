@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import React from 'react';
+import { SiR, SiPython, SiNextdotjs } from 'react-icons/si';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail, SiFlutter } from "react-icons/si";
+
+
 
 export default function Home() {
     return (
@@ -12,10 +17,9 @@ export default function Home() {
             
                 <ul className="flex space-x-6 text-sm font-bold">
                     <li><Link href="/">Home</Link></li>
-                    <li><Link href="#about">About</Link></li>
                     <li><Link href="#skills">Skills</Link></li>
                     <li><Link href="/works">Works</Link></li>
-                    <li><Link href="#contact">Contact</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </nav>
             {/* ...rest of your page content here... */}

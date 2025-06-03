@@ -2,7 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiR, SiPython, SiNextdotjs } from 'react-icons/si';
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiGmail, SiFlutter } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -20,15 +22,12 @@ export default function Home() {
 
         <ul className="flex space-x-6 text-sm font-bold">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="#about">About</Link></li>
           <li><Link href="/skills">Skills</Link></li>
           <li><Link href="/works">Works</Link></li>
-          <li><Link href="#contact">Contact</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>
-
       <main className="flex flex-col md:flex-row items-center justify-center gap-12 px-4 py-10 md:py-20 z-10 relative">
-        {/* Left: Text Content */}
         <div className="md:w-[40%] w-full mb-10 md:mb-0 text-center md:text-left flex flex-col justify-center">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
             Hi, I'm <span className="text-purple-400">Juster</span><br />
@@ -37,14 +36,17 @@ export default function Home() {
               — with a touch of <span className="text-purple-300 font-semibold">Web Design</span> creativity.
             </span>
           </h2>
-          <Link href="#contact">
-            <button className="mt-6 px-8 py-3 text-lg bg-purple-600 hover:bg-purple-500 transition rounded-full font-semibold shadow-lg">
-              Let's Connect
+          <Link href="/contact">
+              <button className="mt-6 px-8 py-3 text-lg bg-white text-black hover:bg-purple-500 hover:text-white transition rounded-full font-semibold shadow-lg">
+              Get in Touch!
+            </button>
+          </Link>
+          <Link href="/Works">
+            <button className="mt-6 px-8 py-3 text-lg bg-purple-600 hover:bg-white hover:text-black transition rounded-full font-semibold shadow-lg">
+              Browse Projects
             </button>
           </Link>
         </div>
-
-        {/* Right: Profile Image */}
         <div className="md:w-[40%] w-full flex justify-center items-center">
           <div className="relative w-52 h-52 md:w-80 md:h-80 rounded-full bg-[#7833ff] shadow-2xl overflow-hidden">
             <Image
@@ -57,12 +59,19 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Footer Icons */}
-      <footer className="flex justify-center space-x-6 py-15 text-gray-400 font-bold text-sm relative z-10">
-        <Link href="https://linkedin.com" target="_blank">LinkedIn</Link>
-        <Link href="https://github.com/Strixyl" target="_blank">GitHub</Link>
-        <Link href="mailto:uretajuster@gmail.com" target="_blank">G-Mail</Link>
-
+      <footer className="flex justify-center space-x-6 py-10 mt-8 text-gray-400 font-bold text-sm relative z-10">
+        <Link href="https://linkedin.com" target="_blank" className="flex items-center space-x-2">
+          <FaLinkedin size={18} />
+          <span>LinkedIn</span>
+        </Link>
+        <Link href="https://github.com/Strixyl" target="_blank" className="flex items-center space-x-2">
+          <FaGithub size={18} />
+          <span> GitHub </span>
+        </Link>
+        <Link href="mailto:uretajuster@gmail.com" target="_blank" className="flex items-center space-x-2">
+          <SiGmail size={18} />
+          <span> G-Mail </span>
+        </Link>
       </footer>
     </div>
   );
