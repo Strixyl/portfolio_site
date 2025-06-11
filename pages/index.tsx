@@ -32,7 +32,7 @@ export default function Home() {
             Hi, I'm <span className="text-purple-400">Juster</span><br />
             <span className="text-xl md:text-3xl font-bold text-gray-300">
               A Computer Science student specializing in <span className="text-purple-300 font-bold">Data Science</span><br />
-              — with a touch of <span className="text-purple-300 font-semibold">Web Design</span> creativity.
+               with a touch of <span className="text-purple-300 font-semibold">Web Design</span> creativity.
             </span>
           </h2>
           <Link href="/contact">

@@ -51,3 +51,16 @@ a:hover {
   background-color: var(--hover-color);
 }
 
+.violet-circle {
+  background-color: #7833ff;
+  border-radius: 9999px;
+  width: 15rem;
+  height: 15rem;
+}
+
+@media (min-width: 768px) {
+  .violet-circle {
+    width: 18rem;
+    height: 18rem;
+  }
+}
