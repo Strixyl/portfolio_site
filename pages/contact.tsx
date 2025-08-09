@@ -43,7 +43,7 @@ export default function Contact() {
               type="submit"
               className="w-full bg-white text-black hover:bg-purple-600 hover:text-white transition px-4 py-2 rounded-lg font-semibold text-sm shadow"
             >
-              Send Message
+              Send me a message
             </button>
           </form>
         </div>
