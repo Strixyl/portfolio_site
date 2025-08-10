@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="w-full max-w-md bg-gray-900/80 rounded-2xl shadow-xl p-6">
           <h1 className="text-2xl font-bold mb-2 text-center">Contact Me</h1>
           <p className="text-gray-400 text-sm text-center mb-6">
-            Let's connect! Fill out the form and I'll get back to you soon.
+            Let's connect! Fill out the form and I'll get at ya'.
           </p>
           <form className="space-y-4">
             <input
