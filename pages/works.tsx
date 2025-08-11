@@ -23,8 +23,6 @@ export default function Home() {
                     <li><Link href="#contact">Contact</Link></li>
                 </ul>
             </nav>
-
-
             <main className="px-8 py-16 md:py-24">
                 <h2 className="text-4xl font-bold mb-12 text-center">My Works</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
