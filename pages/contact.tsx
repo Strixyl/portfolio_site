@@ -1,51 +1,181 @@
-import React from 'react';
+import React, { useState, ChangeEvent, MouseEvent } from 'react';
 import Link from 'next/link';
+import { SiGmail, SiGithub, SiLinkedin } from 'react-icons/si';
+import { MdPhone, MdLocationOn } from 'react-icons/md';
+import { IoSend } from 'react-icons/io5';
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    alert('Thanks for your message! I\'ll get back to you soon.');
+    setFormData({ name: '', email: '', message: '' });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white font-sans p-4 flex flex-col">
       {/* Navbar */}
       <nav className="flex items-center justify-between px-4 py-4 border-b border-gray-700 z-10 relative mb-8">
         <ul className="flex space-x-6 text-sm font-bold">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/works">Works</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/" className="hover:text-purple-400 transition-colors">Home</Link></li>
+          <li><Link href="/works" className="hover:text-purple-400 transition-colors">Works</Link></li>
+          <li><Link href="/contact" className="text-purple-400">Contact</Link></li>
         </ul>
       </nav>
 
       {/* Contact Section */}
       <main className="flex flex-1 items-center justify-center">
-        <div className="w-full max-w-md bg-gray-900/80 rounded-2xl shadow-xl p-6">
-          <h1 className="text-2xl font-bold mb-2 text-center">Contact Me</h1>
-          <p className="text-gray-400 text-sm text-center mb-6">
-            Let's connect! Fill out the form and I'll get at ya'.
-          </p>
-          <form className="space-y-4">
-            <input
-              type="text"
-              required
-              className="w-full px-3 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600 text-sm"
-              placeholder="Your Name"
-            />
-            <input
-              type="email"
-              required
-              className="w-full px-3 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600 text-sm"
-              placeholder="Email"
-            />
-            <textarea
-              required
-              className="w-full px-3 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600 text-sm resize-none"
-              rows={4}
-              placeholder="Message"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-white text-black hover:bg-purple-600 hover:text-white transition px-4 py-2 rounded-lg font-semibold text-sm shadow"
-            >
-              Send me a message
-            </button>
-          </form>
+        <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          {/* Contact Form */}
+          <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-700/50">
+            <h1 className="text-3xl font-bold mb-3 text-center bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+              Contact Me
+            </h1>
+            <p className="text-gray-400 text-center mb-8">
+              Let's connect! Fill out the form and I'll get back to you.
+            </p>
+            
+            <div className="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  placeholder="Your Name"
+                />
+              </div>
+              
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  placeholder="Email Address"
+                />
+              </div>
+              
+              <div>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                  rows={5}
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              
+              <button
+                onClick={handleSubmit}
+                className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white transition-all px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2 group"
+              >
+                <IoSend className="group-hover:translate-x-1 transition-transform" />
+                Send Message
+              </button>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-6">
+            
+            {/* Get in Touch Card */}
+            <div className="bg-gray-900/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+              <h2 className="text-2xl font-bold mb-6 text-white">Get in Touch</h2>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
+                  <SiGmail className="text-purple-400 text-xl" />
+                  <div>
+                    <p className="text-sm text-gray-400">Email</p>
+                    <p className="text-white">your.email@example.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
+                  <MdPhone className="text-purple-400 text-xl" />
+                  <div>
+                    <p className="text-sm text-gray-400">Phone</p>
+                    <p className="text-white">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
+                  <MdLocationOn className="text-purple-400 text-xl" />
+                  <div>
+                    <p className="text-sm text-gray-400">Location</p>
+                    <p className="text-white">Cebu City, Philippines</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links Card */}
+            <div className="bg-gray-900/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+              <h2 className="text-2xl font-bold mb-6 text-white">Connect With Me</h2>
+              
+              <div className="grid grid-cols-1 gap-3">
+                <a 
+                  href="#" 
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
+                >
+                  <SiGithub className="text-gray-400 group-hover:text-purple-400 text-xl" />
+                  <div>
+                    <p className="text-white group-hover:text-purple-300">GitHub</p>
+                    <p className="text-sm text-gray-400">@yourusername</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="#" 
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
+                >
+                  <SiLinkedin className="text-gray-400 group-hover:text-purple-400 text-xl" />
+                  <div>
+                    <p className="text-white group-hover:text-purple-300">LinkedIn</p>
+                    <p className="text-sm text-gray-400">Your Name</p>
+                  </div>
+                </a>
+        
+              </div>
+            </div>
+
+            {/* Availability Status */}
+            <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-6 border border-green-700/50">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <h3 className="text-lg font-semibold text-white">Available for Work</h3>
+              </div>
+              <p className="text-green-200 text-sm">
+                I'm currently open to new opportunities and exciting projects. Let's discuss how we can work together!
+              </p>
+            </div>
+
+          </div>
         </div>
       </main>
     </div>
