@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, MouseEvent } from 'react';
 import Link from 'next/link';
-import { SiGmail, SiGithub, SiLinkedin } from 'react-icons/si';
+import { SiGmail, SiGithub, SiLinkedin,} from 'react-icons/si';
 import { MdPhone, MdLocationOn } from 'react-icons/md';
 import { IoSend } from 'react-icons/io5';
 
@@ -108,29 +108,40 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-6 text-white">Get in Touch</h2>
               
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
-                  <SiGmail className="text-purple-400 text-xl" />
+                <a 
+                  href="mailto:your.email@example.com"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
+                >
+                  <SiGmail className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white">your.email@example.com</p>
+                    <p className="text-white group-hover:text-purple-300 transition-colors">justerureta@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
-                  <MdPhone className="text-purple-400 text-xl" />
+                <a 
+                  href="tel:+15551234567"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
+                >
+                  <MdPhone className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
-                    <p className="text-white">+1 (555) 123-4567</p>
+                    <p className="text-white group-hover:text-purple-300 transition-colors">09292153424</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
-                  <MdLocationOn className="text-purple-400 text-xl" />
+                <a 
+                  href="https://maps.google.com/?q=Iloilo+City,+Philippines"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
+                >
+                  <MdLocationOn className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Location</p>
-                    <p className="text-white">Cebu City, Philippines</p>
+                    <p className="text-white group-hover:text-purple-300 transition-colors">Iloillo City, Philippines</p>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
 
@@ -140,27 +151,30 @@ export default function Contact() {
               
               <div className="grid grid-cols-1 gap-3">
                 <a 
-                  href="#" 
+                  href="https://github.com/Strixyl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
                 >
-                  <SiGithub className="text-gray-400 group-hover:text-purple-400 text-xl" />
+                  <SiGithub className="text-gray-400 group-hover:text-purple-400 text-xl group-hover:scale-110 transition-all" />
                   <div>
                     <p className="text-white group-hover:text-purple-300">GitHub</p>
-                    <p className="text-sm text-gray-400">@yourusername</p>
+                    <p className="text-sm text-gray-400">@Strixyl</p>
                   </div>
                 </a>
                 
                 <a 
-                  href="#" 
+                  //href="put linkedin profile here near futre"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
                 >
-                  <SiLinkedin className="text-gray-400 group-hover:text-purple-400 text-xl" />
+                  <SiLinkedin className="text-gray-400 group-hover:text-purple-400 text-xl group-hover:scale-110 transition-all" />
                   <div>
                     <p className="text-white group-hover:text-purple-300">LinkedIn</p>
-                    <p className="text-sm text-gray-400">Your Name</p>
+                    <p className="text-sm text-gray-400">Juster Ureta</p>
                   </div>
                 </a>
-        
               </div>
             </div>
 

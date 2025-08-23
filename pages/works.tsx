@@ -20,7 +20,7 @@ export default function Home() {
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/skills">Skills</Link></li>
                     <li><Link href="/works">Works</Link></li>
-                    <li><Link href="#contact">Contact</Link></li>
+                    <li><Link href="/contact">Contact</Link></li>
                 </ul>
             </nav>
             <main className="px-8 py-16 md:py-24">
