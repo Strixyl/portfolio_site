@@ -31,7 +31,6 @@ export default function Contact() {
     alert('Thanks for your message! I\'ll get back to you soon.');
     setFormData({ name: '', email: '', message: '' });
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white font-sans p-4 flex flex-col">
       {/* Navbar */}
@@ -42,11 +41,9 @@ export default function Contact() {
           <li><Link href="/contact" className="text-purple-400">Contact</Link></li>
         </ul>
       </nav>
-
       {/* Contact Section */}
       <main className="flex flex-1 items-center justify-center">
         <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
           {/* Contact Form */}
           <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-700/50">
             <h1 className="text-3xl font-bold mb-3 text-center bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
@@ -54,8 +51,7 @@ export default function Contact() {
             </h1>
             <p className="text-gray-400 text-center mb-8">
               Let's connect! Fill out the form and I'll get back to you.
-            </p>
-            
+            </p> 
             <div className="space-y-6">
               <div>
                 <input
@@ -67,7 +63,6 @@ export default function Contact() {
                   placeholder="Your Name"
                 />
               </div>
-              
               <div>
                 <input
                   type="email"
@@ -78,7 +73,6 @@ export default function Contact() {
                   placeholder="Email Address"
                 />
               </div>
-              
               <div>
                 <textarea
                   name="message"
@@ -99,17 +93,14 @@ export default function Contact() {
               </button>
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-6">
-            
             {/* Get in Touch Card */}
             <div className="bg-gray-900/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
               <h2 className="text-2xl font-bold mb-6 text-white">Get in Touch</h2>
-              
               <div className="space-y-4">
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:uretajuster@gmail.com"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
                 >
                   <SiGmail className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
@@ -129,7 +120,6 @@ export default function Contact() {
                     <p className="text-white group-hover:text-purple-300 transition-colors">09292153424</p>
                   </div>
                 </a>
-                
                 <a 
                   href="https://maps.google.com/?q=Iloilo+City,+Philippines"
                   target="_blank"
