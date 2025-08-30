@@ -106,7 +106,7 @@ export default function Contact() {
                   <SiGmail className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white group-hover:text-purple-300 transition-colors">justerureta@gmail.com</p>
+                    <p className="text-white group-hover:text-purple-300 transition-colors">uretajuster@gmail.com</p>
                   </div>
                 </a>
                 
