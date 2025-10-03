@@ -32,13 +32,13 @@ export default function Contact() {
     setFormData({ name: '', email: '', message: '' });
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white font-sans p-4 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-900 text-white font-sans p-4 flex flex-col">
       {/* Navbar */}
       <nav className="flex items-center justify-between px-4 py-4 border-b border-gray-700 z-10 relative mb-8">
         <ul className="flex space-x-6 text-sm font-bold">
-          <li><Link href="/" className="hover:text-purple-400 transition-colors">Home</Link></li>
-          <li><Link href="/works" className="hover:text-purple-400 transition-colors">Works</Link></li>
-          <li><Link href="/contact" className="text-purple-400">Contact</Link></li>
+          <li><Link href="/" className="hover:text-slate-400 transition-colors">Home</Link></li>
+          <li><Link href="/works" className="hover:text-slate-400 transition-colors">Works</Link></li>
+          <li><Link href="/contact" className="text-slate-400">Contact</Link></li>
         </ul>
       </nav>
       {/* Contact Section */}
@@ -46,7 +46,7 @@ export default function Contact() {
         <div className="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
           <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-gray-700/50">
-            <h1 className="text-3xl font-bold mb-3 text-center bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold mb-3 text-center bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
               Contact Me
             </h1>
             <p className="text-gray-400 text-center mb-8">
@@ -59,7 +59,7 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                   placeholder="Your Name"
                 />
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                   placeholder="Email Address"
                 />
               </div>
@@ -78,7 +78,7 @@ export default function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-800/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all resize-none"
                   rows={5}
                   placeholder="Your Message"
                 ></textarea>
@@ -86,16 +86,14 @@ export default function Contact() {
               
               <button
                 onClick={handleSubmit}
-                className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white transition-all px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2 group"
+                className="w-full bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white transition-all px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-slate-500/25 flex items-center justify-center gap-2 group"
               >
                 <IoSend className="group-hover:translate-x-1 transition-transform" />
                 Send Message
               </button>
             </div>
           </div>
-          {/* Contact Information */}
           <div className="space-y-6">
-            {/* Get in Touch Card */}
             <div className="bg-gray-900/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
               <h2 className="text-2xl font-bold mb-6 text-white">Get in Touch</h2>
               <div className="space-y-4">
@@ -103,10 +101,10 @@ export default function Contact() {
                   href="mailto:uretajuster@gmail.com"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
                 >
-                  <SiGmail className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
+                  <SiGmail className="text-slate-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white group-hover:text-purple-300 transition-colors">uretajuster@gmail.com</p>
+                    <p className="text-white group-hover:text-slate-300 transition-colors">uretajuster@gmail.com</p>
                   </div>
                 </a>
                 
@@ -114,10 +112,10 @@ export default function Contact() {
                   href="tel:+15551234567"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
                 >
-                  <MdPhone className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
+                  <MdPhone className="text-slate-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
-                    <p className="text-white group-hover:text-purple-300 transition-colors">09292153424</p>
+                    <p className="text-white group-hover:text-slate-300 transition-colors">09292153424</p>
                   </div>
                 </a>
                 <a 
@@ -126,10 +124,10 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors cursor-pointer group"
                 >
-                  <MdLocationOn className="text-purple-400 text-xl group-hover:scale-110 transition-transform" />
+                  <MdLocationOn className="text-slate-400 text-xl group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-sm text-gray-400">Location</p>
-                    <p className="text-white group-hover:text-purple-300 transition-colors">Iloillo City, Philippines</p>
+                    <p className="text-white group-hover:text-slate-300 transition-colors">Iloillo City, Philippines</p>
                   </div>
                 </a>
               </div>
@@ -144,11 +142,11 @@ export default function Contact() {
                   href="https://github.com/Strixyl"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-slate-600/20 hover:border-purple-500 border border-transparent transition-all group"
                 >
-                  <SiGithub className="text-gray-400 group-hover:text-purple-400 text-xl group-hover:scale-110 transition-all" />
+                  <SiGithub className="text-gray-400 group-hover:text-slate-400 text-xl group-hover:scale-110 transition-all" />
                   <div>
-                    <p className="text-white group-hover:text-purple-300">GitHub</p>
+                    <p className="text-white group-hover:text-slate-300">GitHub</p>
                     <p className="text-sm text-gray-400">@Strixyl</p>
                   </div>
                 </a>
@@ -157,11 +155,11 @@ export default function Contact() {
                   //href="put linkedin profile here near futre"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-purple-600/20 hover:border-purple-500 border border-transparent transition-all group"
+                  className="flex items-center gap-4 p-3 rounded-lg bg-gray-800/50 hover:bg-slate-600/20 hover:border-slate-500 border border-transparent transition-all group"
                 >
-                  <SiLinkedin className="text-gray-400 group-hover:text-purple-400 text-xl group-hover:scale-110 transition-all" />
+                  <SiLinkedin className="text-gray-400 group-hover:text-slate-400 text-xl group-hover:scale-110 transition-all" />
                   <div>
-                    <p className="text-white group-hover:text-purple-300">LinkedIn</p>
+                    <p className="text-white group-hover:text-slate-300">LinkedIn</p>
                     <p className="text-sm text-gray-400">Juster Ureta</p>
                   </div>
                 </a>
