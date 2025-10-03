@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from 'react';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiGmail, SiFlutter } from "react-icons/si";
 
+
+// nodes for floating designs with random for posiitioning
 interface Node {
   x: number;
   y: number;
@@ -33,7 +35,6 @@ const NetworkBackground: React.FC = () => {
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
 
     const nodes: Node[] = [];
     const nodeCount: number = 50;
@@ -134,7 +135,6 @@ const FloatingElements: React.FC = () => {
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-slate-800 text-white font-sans relative overflow-hidden flex flex-col">
-      {/* Network Background */}
       <NetworkBackground />
 
       <FloatingElements />
@@ -203,7 +203,6 @@ export default function Home() {
         </div>
         <div className="md:w-[40%] w-full flex justify-center items-center">
           <div className="relative w-52 h-52 md:w-80 md:h-80 group">
-            {/* Simple liquid blob background */}
             <div className="absolute inset-0 bg-gradient-to-r from-slate-400 via-slate-300 to-slate-600 opacity-80 animate-spin liquid-blob shadow-2xl" style={{ animationDuration: '10s' }}></div>
 
             <div className="absolute inset-4 rounded-full bg-slate-600 overflow-hidden shadow-lg">
