@@ -181,10 +181,10 @@ export default function Home() {
       <main className="flex flex-col md:flex-row items-center justify-center gap-12 px-4 py-10 md:py-12 xl:py-8 min-h-[70vh] xl:min-h-[75vh] z-10 relative">
         <div className="md:w-[40%] w-full mb-10 md:mb-0 text-center md:text-left flex flex-col justify-center">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
-            Hi, I'm <span className="text-white-400">Juster</span><br />
+            Hi, I'm <span className="text-teal-400">Juster</span><br />
             <span className="text-xl md:text-3xl font-bold text-gray-300">
-              A Computer Science student specializing in <span className="text-slate-300 font-bold">Data Science</span><br />
-              with a touch of <span className="text-slate-300 font-semibold">Web Design</span> creativity.
+              A Computer Science student specializing in <span className="text-cyan-300 font-bold">Data Science</span><br />
+              with a touch of <span className="text-cyan-300 font-semibold">Web Design</span> creativity.
             </span>
           </h2>
 
