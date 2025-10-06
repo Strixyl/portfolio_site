@@ -177,7 +177,6 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-
       <main className="flex flex-col md:flex-row items-center justify-center gap-12 px-4 py-10 md:py-12 xl:py-8 min-h-[70vh] xl:min-h-[75vh] z-10 relative">
         <div className="md:w-[40%] w-full mb-10 md:mb-0 text-center md:text-left flex flex-col justify-center">
           <h2 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight">
