@@ -22,7 +22,5 @@ This is a personal portfolio website built with [Next.js](https://nextjs.org/) a
 
 3. **Open [http://localhost:3000](http://localhost:3000) in your browser.**
 
-## Project Structure
 
-- `pages/index.tsx` — Main portfolio page
-- `public/images/elgatopic.png` — Profile image
+
